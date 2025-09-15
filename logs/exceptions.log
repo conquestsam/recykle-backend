@@ -1,0 +1,109 @@
+2025-09-13 18:05:11:511 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-13 18:05:34:534 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-13 23:13:56:1356 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-13 23:17:26:1726 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-13 23:17:35:1735 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-13 23:18:11:1811 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-13 23:18:17:1817 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-13 23:22:53:2253 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-14 03:49:45:4945 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-14 03:50:43:5043 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-14 04:13:04:134 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-14 04:14:13:1413 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-14 04:55:49:5549 [31merror[39m: [31muncaughtException: nodemailer.createTransporter is not a function[39m
+[31mTypeError: nodemailer.createTransporter is not a function[39m
+[31m    at new EmailService (file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:16:35)[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/services/emailService.js:215:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-14 04:56:07:567 [31merror[39m: [31muncaughtException: createServer is not defined[39m
+[31mReferenceError: createServer is not defined[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/server.js:8:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-14 04:56:19:5619 [31merror[39m: [31muncaughtException: createServer is not defined[39m
+[31mReferenceError: createServer is not defined[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/server.js:8:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
+2025-09-14 05:09:56:956 [31merror[39m: [31muncaughtException: createServer is not defined[39m
+[31mReferenceError: createServer is not defined[39m
+[31m    at file:///C:/Users/hp/Documents/Recykle-App%20Backend/src/server.js:8:16[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)[39m
