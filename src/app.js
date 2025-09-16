@@ -108,8 +108,8 @@ app.get('/api/health', (req, res) => {
 });
 
 // ==================== AUTHENTICATION ENDPOINTS ====================
-app.post('/api/auth/register', authLimiter, authController.register);
-app.post('/api/auth/login', authLimiter, authController.login);
+app.post('/api/auth/register', authController.register);
+app.post('/api/auth/login', authController.login);
 app.post('/api/auth/verify-email', authController.verifyEmail);
 app.post('/api/auth/forgot-password', authLimiter, authController.forgotPassword);
 app.post('/api/auth/reset-password', authLimiter, authController.resetPassword);
@@ -121,7 +121,7 @@ app.patch('/api/auth/change-password', authenticateToken, authController.changeP
 app.get('/api/users', authenticateToken, requireRole(['admin', 'government']), userController.getAllUsers);
 app.get('/api/users/:id', authenticateToken, userController.getUserById);
 app.post('/api/users', authenticateToken, requireRole(['admin']), userController.createUser);
-app.patch('/api/users/:id', authenticateToken, requireRole(['admin']), userController.updateUserById);
+app.put('/api/users/:id', authenticateToken, requireRole(['admin']), userController.updateUserById);
 app.delete('/api/users/:id', authenticateToken, requireRole(['admin']), userController.deleteUserById);
 app.get('/api/users/:id/dashboard', authenticateToken, userController.getUserDashboard);
 app.get('/api/users/:id/activity', authenticateToken, userController.getUserActivity);
@@ -142,8 +142,8 @@ app.delete('/api/users/account', authenticateToken, userController.deleteAccount
 app.post('/api/pickups', authenticateToken, requireRole(['household']), pickupController.createPickupRequest);
 app.get('/api/pickups', authenticateToken, pickupController.getPickupRequests);
 app.get('/api/pickups/:id', authenticateToken, pickupController.getPickupRequest);
-app.patch('/api/pickups/:id/accept', authenticateToken, requireRole(['waste_picker']), pickupController.acceptPickupRequest);
-app.patch('/api/pickups/:id/status', authenticateToken, pickupController.updatePickupStatus);
+app.put('/api/pickups/:id/accept', authenticateToken, requireRole(['waste_picker']), pickupController.acceptPickupRequest);
+app.put('/api/pickups/:id/status', authenticateToken, pickupController.updatePickupStatus);
 app.patch('/api/pickups/:id/cancel', authenticateToken, pickupController.cancelPickupRequest);
 app.get('/api/pickups/nearby', authenticateToken, requireRole(['waste_picker']), pickupController.getNearbyPickups);
 app.get('/api/pickups/stats', authenticateToken, pickupController.getPickupStats);

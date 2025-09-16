@@ -116,7 +116,7 @@ class EmailService {
       appName: 'Recykle-Naija',
     };
 
-    return await this.sendTemplateEmail(user.email, 'pickup_request_confirmation', variables);
+    // return await this.sendTemplateEmail(user.email, 'pickup_request_confirmation', variables);
   }
 
   // Pickup accepted notification
@@ -143,7 +143,7 @@ class EmailService {
       appName: 'Recykle-Naija',
     };
 
-    return await this.sendTemplateEmail(user.email, 'pickup_completed', variables);
+    // return await this.sendTemplateEmail(user.email, 'pickup_completed', variables);
   }
 
   // Reward redemption confirmation
