@@ -8,40 +8,41 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 
 import { authenticateToken, requireRole } from './middleware/auth.js';
-// import logger from './utils/logger.js';
+import logger from './utils/logger.js';
 
 // Import and instantiate all controllers properly
 import AuthController from './controllers/authController.js';
 import UserController from './controllers/userController.js';
 import PickupController from './controllers/pickupController.js';
 import RewardsController from './controllers/rewardsController.js';
-import NotificationController from './controllers/notificationController.js';
 import AnalyticsController from './controllers/analyticsController.js';
-import PaymentController from './controllers/paymentController.js';
+import NotificationController from './controllers/notificationController.js';
+import SystemController from './controllers/systemController.js';
+import AdminController from './controllers/adminController.js';
 import SubscriptionController from './controllers/subscriptionController.js';
 import ReportController from './controllers/reportController.js';
-import SystemController from './controllers/systemController.js';
 import SupportController from './controllers/supportController.js';
 import RecyclingCompanyController from './controllers/recyclingCompanyController.js';
 import WasteCategoryController from './controllers/WasteCategoryController.js';
 import EnvironmentalController from './controllers/environmentalController.js';
-import AdminController from './controllers/adminController.js';
+import PaymentController from './controllers/paymentController.js';
 
-const adminController = new AdminController(); 
-const environmentalController = new EnvironmentalController(); 
-const wasteCategoryController = new WasteCategoryController();
-const recyclingCompanyController = new RecyclingCompanyController();
-const supportController = new SupportController(); 
-const systemController = new SystemController(); 
-const reportController = new ReportController();
-const subscriptionController = new SubscriptionController();
-const paymentController = new PaymentController();
+// Instantiate all controllers
 const authController = new AuthController();
-const userController = new UserController(); 
-const pickupController = new PickupController(); 
-const rewardsController = new RewardsController(); 
-const notificationController = new NotificationController(); 
-const analyticsController = new AnalyticsController(); 
+const userController = new UserController();
+const pickupController = new PickupController();
+const rewardsController = new RewardsController();
+const analyticsController = new AnalyticsController();
+const notificationController = new NotificationController();
+const systemController = new SystemController();
+const adminController = new AdminController();
+const subscriptionController = new SubscriptionController();
+const reportController = new ReportController();
+const supportController = new SupportController();
+const recyclingCompanyController = new RecyclingCompanyController();
+const wasteCategoryController = new WasteCategoryController();
+const environmentalController = new EnvironmentalController();
+const paymentController = new PaymentController();
 
 const app = express();
 const server = createServer(app);
@@ -128,10 +129,10 @@ app.get('/api/users/:id/activity', authenticateToken, userController.getUserActi
 app.patch('/api/users/profile', authenticateToken, userController.updateProfile);
 app.patch('/api/users/waste-picker-profile', authenticateToken, requireRole(['waste_picker']), userController.updateWastePickerProfile);
 app.patch('/api/users/recycling-company-profile', authenticateToken, requireRole(['recycling_company']), userController.updateRecyclingCompanyProfile);
-app.get('/api/users/profile/:id', authenticateToken, userController.getFullProfile);
+app.get('/api/users/profile/:id?', authenticateToken, userController.getFullProfile);
 app.get('/api/users/search/waste-pickers', authenticateToken, userController.searchWastePickers);
 app.get('/api/users/search/recycling-companies', authenticateToken, userController.searchRecyclingCompanies);
-app.get('/api/users/stats/:id', authenticateToken, userController.getUserStats);
+app.get('/api/users/stats/:id?', authenticateToken, userController.getUserStats);
 app.post('/api/users/upload-avatar', authenticateToken, userController.uploadAvatar);
 app.post('/api/users/verify-documents', authenticateToken, userController.uploadVerificationDocuments);
 app.get('/api/users/leaderboard', authenticateToken, userController.getLeaderboard);
@@ -160,7 +161,7 @@ app.patch('/api/rewards/:id', authenticateToken, requireRole(['admin']), rewards
 app.delete('/api/rewards/:id', authenticateToken, requireRole(['admin']), rewardsController.deleteReward);
 app.get('/api/rewards/stats', authenticateToken, requireRole(['admin']), rewardsController.getRewardStats);
 
-// ==================== NOTIFICATION ENDPOINTS ===================
+// ==================== NOTIFICATION ENDPOINTS ====================
 app.get('/api/notifications', authenticateToken, notificationController.getNotifications);
 app.patch('/api/notifications/:id/read', authenticateToken, notificationController.markAsRead);
 app.patch('/api/notifications/read-all', authenticateToken, notificationController.markAllAsRead);
@@ -259,7 +260,27 @@ app.get('/api/admin/stats', authenticateToken, requireRole(['admin']), adminCont
 app.patch('/api/admin/users/:id/role', authenticateToken, requireRole(['admin']), adminController.manageUserRoles);
 app.post('/api/admin/maintenance', authenticateToken, requireRole(['admin']), adminController.systemMaintenance);
 app.post('/api/admin/users/bulk', authenticateToken, requireRole(['admin']), adminController.bulkUserOperations);
-app.get('/api/admin/logs',  authenticateToken, requireRole(['admin']), adminController.getSystemLogs);
+app.get('/api/admin/logs', authenticateToken, requireRole(['admin']), adminController.getSystemLogs);
+
+// ==================== ERROR HANDLING MIDDLEWARE ====================
+app.use('*', (req, res) => {
+  res.status(404).json({
+    success: false,
+    message: 'API endpoint not found',
+    path: req.originalUrl
+  });
+});
+
+app.use((err, req, res, next) => {
+  console.error('💥 Global error handler:', err);
+  logger.error('Global error handler:', err);
+  
+  res.status(err.status || 500).json({
+    success: false,
+    message: err.message || 'Internal server error',
+    ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
+  });
+});
 
 // Socket.IO connection handling
 io.on('connection', (socket) => {

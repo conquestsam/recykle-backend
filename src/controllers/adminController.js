@@ -7,7 +7,7 @@ import logger from '../utils/logger.js';
 import fs from 'fs/promises';
 import path from 'path';
 
-class AdminController {
+export default class AdminController {
   // Get all admin users (Super Admin only)
   async getAllAdminUsers(req, res) {
     try {
@@ -599,14 +599,3 @@ class AdminController {
     }
   }
 }
-
-export const getAllAdminUsers = new AdminController().getAllAdminUsers;
-export const createAdminUser = new AdminController().createAdminUser;
-export const updateAdminUser = new AdminController().updateAdminUser;
-export const deleteAdminUser = new AdminController().deleteAdminUser;
-export const getAdminDashboard = new AdminController().getAdminDashboard;
-export const getAdminStats = new AdminController().getAdminStats;
-export const manageUserRoles = new AdminController().manageUserRoles;
-export const systemMaintenance = new AdminController().systemMaintenance;
-export const bulkUserOperations = new AdminController().bulkUserOperations;
-export const getSystemLogs = new AdminController().getSystemLogs;

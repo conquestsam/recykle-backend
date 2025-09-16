@@ -6,7 +6,7 @@ import emailService from '../services/emailService.js';
 import notificationService from '../services/notificationService.js';
 import logger from '../utils/logger.js';
 
-class SubscriptionController {
+export default class SubscriptionController {
   // Get user subscriptions
   async getSubscriptions(req, res) {
     try {
@@ -288,9 +288,3 @@ class SubscriptionController {
   }
 }
 
-export const getSubscriptions = new SubscriptionController().getSubscriptions;
-export const createSubscription = new SubscriptionController().createSubscription;
-export const updateSubscription = new SubscriptionController().updateSubscription;
-export const cancelSubscription = new SubscriptionController().cancelSubscription;
-export const getSubscriptionPlans = new SubscriptionController().getSubscriptionPlans;
-export const upgradeSubscription = new SubscriptionController().upgradeSubscription;

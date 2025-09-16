@@ -5,7 +5,7 @@ import logger from '../utils/logger.js';
 import fs from 'fs/promises';
 import path from 'path';
 
-class SystemController {
+export default class SystemController {
   // Get system settings
   async getSettings(req, res) {
     try {
@@ -416,6 +416,3 @@ async clearCache(req, res) {
     }
   }
 }
-
-// Keep your default export
-export default SystemController;

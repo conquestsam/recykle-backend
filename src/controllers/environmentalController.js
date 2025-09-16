@@ -6,7 +6,7 @@ import logger from '../utils/logger.js';
 // Mock environmental data storage
 const mockEnvironmentalData = [];
 
-class EnvironmentalController {
+export default class EnvironmentalController {
   // Get environmental data
   async getEnvironmentalData(req, res) {
     try {
@@ -217,8 +217,3 @@ class EnvironmentalController {
     }
   }
 }
-
-export const getEnvironmentalData = new EnvironmentalController().getEnvironmentalData;
-export const createEnvironmentalData = new EnvironmentalController().createEnvironmentalData;
-export const updateEnvironmentalData = new EnvironmentalController().updateEnvironmentalData;
-export const getEnvironmentalTrends = new EnvironmentalController().getEnvironmentalTrends;

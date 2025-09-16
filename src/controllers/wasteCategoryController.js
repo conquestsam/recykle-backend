@@ -53,7 +53,7 @@ const mockWasteCategories = [
   }
 ];
 
-class WasteCategoryController {
+export default class WasteCategoryController {
   // Get all waste categories
   async getWasteCategories(req, res) {
     try {
@@ -194,8 +194,3 @@ class WasteCategoryController {
     }
   }
 }
-
-export const getWasteCategories = new WasteCategoryController().getWasteCategories;
-export const createWasteCategory = new WasteCategoryController().createWasteCategory;
-export const updateWasteCategory = new WasteCategoryController().updateWasteCategory;
-export const deleteWasteCategory = new WasteCategoryController().deleteWasteCategory;

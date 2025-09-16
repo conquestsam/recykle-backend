@@ -6,7 +6,7 @@ import emailService from '../services/emailService.js';
 import logger from '../utils/logger.js';
 import { v4 as uuidv4 } from 'uuid';
 
-class RewardsController {
+export default class RewardsController {
   // Get all available rewards
   async getRewards(req, res) {
     try {
@@ -525,5 +525,3 @@ class RewardsController {
     }
   }
 }
-
-export default new RewardsController();

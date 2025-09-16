@@ -6,7 +6,7 @@ import notificationService from '../services/notificationService.js';
 import logger from '../utils/logger.js';
 import { v4 as uuidv4 } from 'uuid';
 
-class PaymentController {
+export default class PaymentController {
   // Initialize payment
   async initializePayment(req, res) {
     try {
@@ -437,15 +437,3 @@ class PaymentController {
     }
   }
 }
-
-export const initializePayment = new PaymentController().initializePayment;
-export const getBanks = new PaymentController().getBanks;
-export const resolveAccount = new PaymentController().resolveAccount;
-export const initiateTransfer = new PaymentController().initiateTransfer;
-export const verifyPayment = new PaymentController().verifyPayment;
-export const getTransactions = new PaymentController().getTransactions;
-export const getTransactionById = new PaymentController().getTransactionById;
-export const processRefund = new PaymentController().processRefund;
-export const getPaymentMethods = new PaymentController().getPaymentMethods;
-export const addPaymentMethod = new PaymentController().addPaymentMethod;
-export const deletePaymentMethod = new PaymentController().deletePaymentMethod;

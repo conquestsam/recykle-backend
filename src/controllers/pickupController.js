@@ -620,31 +620,4 @@ class PickupController {
   }
 }
 
-// Named exports to match your app.js imports
-export const createPickup = (req, res) => new PickupController().createPickupRequest(req, res);
-export const getAllPickups = (req, res) => new PickupController().getPickupRequests(req, res);
-export const getPickupById = (req, res) => new PickupController().getPickupRequest(req, res);
-export const acceptPickup = (req, res) => new PickupController().acceptPickupRequest(req, res);
-export const updatePickupStatus = (req, res) => new PickupController().updatePickupStatus(req, res);
-export const cancelPickup = (req, res) => new PickupController().cancelPickupRequest(req, res);
-export const getNearbyPickups = (req, res) => new PickupController().getNearbyPickups(req, res);
-export const getPickupStats = (req, res) => new PickupController().getPickupStats(req, res);
-
-// These methods don't exist in your current controller, so you might need to implement them:
-export const updatePickup = (req, res) => {
-  // Implement updatePickup functionality if needed
-  res.status(501).json({ message: 'Not implemented' });
-};
-
-export const deletePickup = (req, res) => {
-  // Implement deletePickup functionality if needed
-  res.status(501).json({ message: 'Not implemented' });
-};
-
-export const ratePickup = (req, res) => {
-  // Implement ratePickup functionality if needed
-  // Note: Your current controller handles rating in updatePickupStatus
-  res.status(501).json({ message: 'Not implemented' });
-};
-
 export default PickupController;

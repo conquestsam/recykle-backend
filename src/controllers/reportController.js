@@ -5,7 +5,7 @@ import logger from '../utils/logger.js';
 import fs from 'fs/promises';
 import path from 'path';
 
-class ReportController {
+export default class ReportController {
   // Generate pickup report
   async generatePickupReport(req, res) {
     try {
@@ -394,12 +394,3 @@ class ReportController {
     return `${headers.join(',')}\n${values.join(',')}`;
   }
 }
-
-export const generatePickupReport = new ReportController().generatePickupReport;
-export const generateUserReport = new ReportController().generateUserReport;
-export const generateRevenueReport = new ReportController().generateRevenueReport;
-export const generateEnvironmentalReport = new ReportController().generateEnvironmentalReport;
-export const getReports = new ReportController().getReports;
-export const getReportById = new ReportController().getReportById;
-export const deleteReport = new ReportController().deleteReport;
-export const scheduleReport = new ReportController().scheduleReport;

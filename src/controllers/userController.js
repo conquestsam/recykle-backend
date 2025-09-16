@@ -30,7 +30,7 @@ const upload = multer({
   },
 });
 
-class UserController {
+export default class UserController {
   // Create new user (Admin only)
   async createUser(req, res) {
     try {
@@ -1082,5 +1082,3 @@ class UserController {
     }
   }
 }
-
-export default new UserController();

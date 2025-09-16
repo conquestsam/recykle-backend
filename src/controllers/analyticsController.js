@@ -9,7 +9,7 @@ import {
 import { eq, and, or, desc, asc, sql, between, gte, lte } from 'drizzle-orm';
 import logger from '../utils/logger.js';
 
-class AnalyticsController {
+export default class AnalyticsController {
   // Get dashboard overview
   async getDashboardOverview(req, res) {
     try {
@@ -586,6 +586,3 @@ class AnalyticsController {
     return {};
   }
 }
-
-
-export default AnalyticsController;

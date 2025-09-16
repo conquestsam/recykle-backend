@@ -7,7 +7,7 @@ import logger from '../utils/logger.js';
 // Mock support tickets table structure
 const mockSupportTickets = [];
 
-class SupportController {
+export default class SupportController {
   // Get support tickets
   async getSupportTickets(req, res) {
     try {
@@ -268,10 +268,3 @@ class SupportController {
     }
   }
 }
-
-export const getSupportTickets = new SupportController().getSupportTickets;
-export const createSupportTicket = new SupportController().createSupportTicket;
-export const getSupportTicketById = new SupportController().getSupportTicketById;
-export const updateSupportTicket = new SupportController().updateSupportTicket;
-export const closeSupportTicket = new SupportController().closeSupportTicket;
-export const assignSupportTicket = new SupportController().assignSupportTicket;

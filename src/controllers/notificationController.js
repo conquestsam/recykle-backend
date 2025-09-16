@@ -4,7 +4,7 @@ import { eq, and, desc, sql, or } from 'drizzle-orm';
 import notificationService from '../services/notificationService.js';
 import logger from '../utils/logger.js';
 
-class NotificationController {
+export default class NotificationController {
   // Get user notifications
   async getNotifications(req, res) {
     try {
@@ -335,5 +335,3 @@ class NotificationController {
     }
   }
 }
-
-export default new NotificationController();

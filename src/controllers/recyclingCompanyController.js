@@ -4,7 +4,7 @@ import { eq, and, desc, like, or } from 'drizzle-orm';
 import emailService from '../services/emailService.js';
 import logger from '../utils/logger.js';
 
-class RecyclingCompanyController {
+export default class RecyclingCompanyController {
   // Get all recycling companies
   async getRecyclingCompanies(req, res) {
     try {
@@ -332,10 +332,3 @@ class RecyclingCompanyController {
     }
   }
 }
-
-export const getRecyclingCompanies = new RecyclingCompanyController().getRecyclingCompanies;
-export const createRecyclingCompany = new RecyclingCompanyController().createRecyclingCompany;
-export const getRecyclingCompanyById = new RecyclingCompanyController().getRecyclingCompanyById;
-export const updateRecyclingCompany = new RecyclingCompanyController().updateRecyclingCompany;
-export const deleteRecyclingCompany = new RecyclingCompanyController().deleteRecyclingCompany;
-export const approveRecyclingCompany = new RecyclingCompanyController().approveRecyclingCompany;
