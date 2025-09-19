@@ -4,10 +4,11 @@
   "description": "Enterprise-grade NodeJs backend for Recykle-Naija waste management platform",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node src/server.js",
     "start": "nodemon src/server.js",
     "server": "node src/server.js",
-    "build": "vite build",
+    "build": "echo 'No build step needed'",
+    "vercel-build": "echo 'Vercel build completed'",
     "preview": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "type-check": "tsc --noEmit"
