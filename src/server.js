@@ -127,29 +127,23 @@ try {
 // Test 7: Try to import app.js
 console.log('🧪 TEST 7: Testing app.js import...');
 let appJsWorking = false;
+let io = null; // We'll need to capture the io instance
+
 try {
   const appModule = await import('./app.js');
   console.log('✅ App.js imported successfully');
   
-  if (appModule.app) {
-    console.log('✅ App.js exports app correctly');
-    // Try to use the imported app instead of our basic one
-    try {
-      app = appModule.app;
-      appJsWorking = true;
-      console.log('✅ Using full app.js with all endpoints');
-    } catch (appError) {
-      console.log('⚠️  App.js app usage failed:', appError.message);
-      console.log('⚠️  Continuing with basic app...');
-    }
+  if (appModule.app && appModule.server && appModule.io) {
+    console.log('✅ App.js exports app, server, and io correctly');
+    app = appModule.app;
+    io = appModule.io;
+    appJsWorking = true;
+    console.log('✅ Using full app.js with all endpoints and Socket.io');
   } else {
-    console.log('⚠️  App.js does not export app, using basic app');
+    console.log('⚠️  App.js does not export all required properties');
   }
-  
-  console.log('✅ TEST 7 PASSED: App.js handled gracefully');
 } catch (error) {
   console.error('⚠️  TEST 7 WARNING: App.js import failed:', error.message);
-  console.log('⚠️  Continuing with basic app...');
 }
 
 // Test 8: Add mock auth endpoints if app.js didn't work

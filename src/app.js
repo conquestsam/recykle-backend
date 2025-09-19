@@ -5,6 +5,7 @@ import rateLimit from 'express-rate-limit';
 import compression from 'compression';
 import morgan from 'morgan';
 import { createServer } from 'http';
+import serverless from "serverless-http"; 
 import { Server } from 'socket.io';
 
 import { authenticateToken, requireRole } from './middleware/auth.js';
@@ -109,7 +110,7 @@ app.get('/api/health', (req, res) => {
 
 // ==================== AUTHENTICATION ENDPOINTS ====================
 app.post('/api/auth/register', authController.register);
-app.post('/api/auth/login', authController.login);
+app.post('/api/auth/login', authLimiter, authController.login);
 app.post('/api/auth/verify-email', authController.verifyEmail);
 app.post('/api/auth/forgot-password', authLimiter, authController.forgotPassword);
 app.post('/api/auth/reset-password', authLimiter, authController.resetPassword);
@@ -286,4 +287,4 @@ io.on('connection', (socket) => {
 console.log('🎯 Express app setup complete!');
 
 export { app, server, io };
-export default app;
+export default serverless(app);
