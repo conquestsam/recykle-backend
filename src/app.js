@@ -286,9 +286,5 @@ io.on('connection', (socket) => {
 
 console.log('🎯 Express app setup complete!');
 
-// For Vercel serverless deployment
-const vercelHandler = serverless(app);
-
-// Export for Vercel
-export default vercelHandler;
 export { app, server, io };
+export default serverless(app);
