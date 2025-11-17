@@ -4,8 +4,9 @@
   "description": "Enterprise-grade NodeJs backend for Recykle-Naija waste management platform",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/erver.js",
-    "start": "node src/server.js"
+    "dev": "nodemon src/server.js",
+  "start": "node src/server.js",
+  "build": "npm install"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
